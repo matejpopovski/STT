@@ -1,5 +1,5 @@
- I'm starting to record 3 2 n one go. Let's see if everything looks good. I'm going to press stop recording soon. I'm pressing stop recording.
+ Hello, my name is Marty. I will lead today's Meeting let's start by blah blah blah one two three for 5 and let's move to let's have employees, every employer, say what they would do.
 
 ================ NEW RECORDING ================
 
- Now if I start recording again it should continue after the new recording okay now this is the mess for the AI. Can you read a everything before and after the line saying new recording. If yes, respond with... yes and also make a summary of of this.
+ as we can see after the near recording. After the first recording you have a line and you have a new recording so let's hear all the employees say what they would do. Hello my name is John. and today I would check the databases I would work on S6. I would work on creating Python scripts and I would work on Excel. My name is Steven and I would... work on Snowflake and AWS and Google Cloud. my name is Jack and I would work with fine and accounting today to check the data pipelines and whatnot.
