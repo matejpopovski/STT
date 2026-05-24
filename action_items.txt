@@ -1,0 +1,14 @@
+Here are the clear action items extracted from the transcript:
+
+* **Michael:**
+  • Complete the database migration
+  • Verify that all user data transfers correctly
+  • Deadline: Next Wednesday
+* **Daniel:**
+  • Redesign the analysis dashboard
+  • Push the updated front-end components
+  • Deadline: Friday afternoon
+* **Christopher:**
+  • Optimize the A transcription pipeline
+  • Finish the latency testing
+  • Deadline: Before Monday's client meeting

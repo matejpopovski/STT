@@ -1,28 +1,15 @@
 **Meeting Summary**
 
-**Main Discussion Points:**
+**Date:** Sunday, May 24th
+**Time:** 741 AM
+**Conducted by:** Smarte, Director
 
-- Employees shared their tasks and responsibilities for the day.
-- Discussion focused on individual work assignments.
+**Main Discussion Points:** None mentioned
 
-**Important Details:**
+**Important Details:** The meeting was conducted by Smarte, the director, on a Sunday morning.
 
-- John will work on databases, Python scripts, and Excel.
-- Steven will work on Snowflake, AWS, and Google Cloud.
-- Jack will collaborate with finance and accounting to review data pipelines.
+**Decisions Made:** None mentioned
 
-**Decisions Made:**
+**Action Items:** None mentioned
 
-- Employees were given the opportunity to share their tasks and responsibilities for the day.
-- No specific decisions were made regarding the tasks or projects.
-
-**Action Items:**
-
-- John: Work on databases, Python scripts, and Excel.
-- Steven: Work on Snowflake, AWS, and Google Cloud.
-- Jack: Collaborate with finance and accounting to review data pipelines.
-
-**Follow-up Questions:**
-
-- Will there be any additional tasks or projects assigned to the employees throughout the day?
-- Are there any specific deadlines or milestones that need to be met for the tasks assigned?
+**Follow-up Questions:** None relevant at this time.

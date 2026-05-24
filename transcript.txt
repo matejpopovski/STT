@@ -1,5 +1,9 @@
- Hello, my name is Marty. I will lead today's Meeting let's start by blah blah blah one two three for 5 and let's move to let's have employees, every employer, say what they would do.
+ 1,2,3, this is a test 1,2,3
 
 ================ NEW RECORDING ================
 
- as we can see after the near recording. After the first recording you have a line and you have a new recording so let's hear all the employees say what they would do. Hello my name is John. and today I would check the databases I would work on S6. I would work on creating Python scripts and I would work on Excel. My name is Steven and I would... work on Snowflake and AWS and Google Cloud. my name is Jack and I would work with fine and accounting today to check the data pipelines and whatnot.
+ Hello, my name is Smarte and I would conduct this meeting today. I am the director, so today is Sunday, May 24th. 741 AM in the morning.
+
+================ NEW RECORDING ================
+
+ I am Michael and I will complete the database migration and verify that all user data transfers correctly before next Wednesday. I'm Daniel and... I'm going to redesign the analysis dashboard and push the updated front end components. by Friday afternoon. I'm Christopher and I will optimize the A transcription pipeline and finish the latency testing before my Mondays client ammo.
