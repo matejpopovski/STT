@@ -1,8 +1,14 @@
 # AI Voice Meeting Assistant
 
-A local voice-to-text and AI meeting assistant that records microphone audio, transcribes speech in near real time using Whisper, and uses an LLM to generate summaries and answer questions about the transcript.
+A local voice-to-text and AI meeting assistant that records microphone audio, transcribes speech in near real time using Whisper, and uses an LLM to generate summaries, extract action items, answer contextual questions, and export structured meeting notes.
 
-This project was built as a lightweight AI engineering demo focused on speech-to-text, LLM integration, transcript analysis, and practical user-facing AI workflows.
+This project was built as a lightweight AI engineering demo focused on speech-to-text, LLM integration, transcript analysis, realtime AI workflows, and practical user-facing AI tooling.
+
+---
+
+# Demo Video
+
+[Watch Demo Video](PASTE_YOUR_UNLISTED_YOUTUBE_LINK_HERE)
 
 ---
 
@@ -10,13 +16,16 @@ This project was built as a lightweight AI engineering demo focused on speech-to
 
 - Record audio directly from the microphone
 - Stop and resume recording across the same session
-- Display live transcript chunks while recording
 - Preserve transcript history across multiple recording sessions
+- Display live transcript chunks while recording
 - Add visual separators between recording sessions
-- Generate an AI summary of the full transcript
-- Ask custom questions about the transcript using an LLM
+- Generate AI-powered meeting summaries
+- Extract structured action items from meetings
+- Ask contextual questions about the transcript using an LLM
+- Export meeting transcript, summary, and action items to Markdown
 - Save transcript and summary locally
 - Store API keys securely using environment variables
+- Hybrid local + cloud AI pipeline
 
 ---
 
@@ -29,25 +38,29 @@ This project was built as a lightweight AI engineering demo focused on speech-to
 - SoundDevice for microphone input
 - NumPy for audio processing
 - python-dotenv for environment variable management
+- Markdown export generation
 
 ---
 
 # How It Works
 
-The application follows a simple AI pipeline:
+The application follows a local + cloud AI workflow:
 
 1. The user starts recording from the desktop GUI.
-2. Audio is captured from the microphone in small chunks.
-3. Whisper transcribes the audio locally.
-4. The transcript appears inside the app in near real time.
-5. After stopping the recording, the user can:
-   - generate a summary
-   - ask the AI questions about the transcript
-6. The Groq LLM API processes the transcript and returns a structured response.
+2. Audio is captured from the microphone in realtime.
+3. Whisper transcribes speech locally in small chunks.
+4. The transcript appears live inside the application.
+5. Recording sessions are preserved within the same conversation context.
+6. After recording, the user can:
+   - generate summaries
+   - extract action items
+   - ask contextual questions about the transcript
+   - export meeting notes to Markdown
+7. The Groq LLM API processes the transcript and returns structured AI responses.
 
-This creates a local + cloud hybrid AI workflow:
-- speech-to-text runs locally
-- LLM reasoning runs through the Groq API
+This creates a hybrid AI architecture:
+- local speech-to-text inference
+- cloud-based LLM reasoning and analysis
 
 ---
 
@@ -64,8 +77,10 @@ cd STT
 
 ## 2. Create a virtual environment
 
+IMPORTANT: On macOS, use the Python.org installation of Python 3.12 to ensure Tkinter support.
+
 ```bash
-python3.12 -m venv venv
+/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12 -m venv venv
 source venv/bin/activate
 ```
 
@@ -115,7 +130,7 @@ Do not commit this file to GitHub.
 python gui_app.py
 ```
 
-The app will open in a desktop window.
+The application will launch in a desktop GUI window.
 
 ---
 
@@ -125,8 +140,11 @@ The app will open in a desktop window.
 2. Speak into your microphone
 3. Watch the transcript appear live
 4. Click **Stop Recording**
-5. Click **Create Summary** to summarize the transcript
-6. Type a question and click **Ask AI** to chat with the transcript
+5. Use:
+   - **Create Summary**
+   - **Extract Action Items**
+   - **Ask AI**
+   - **Export Markdown**
 
 ---
 
@@ -137,15 +155,29 @@ What were the main points discussed?
 ```
 
 ```text
-What action items were mentioned?
+What action items were assigned?
 ```
 
 ```text
-What decisions were made?
+What deadlines were mentioned?
 ```
 
 ```text
 What concerns did the speaker mention?
+```
+
+```text
+What decisions were made during the meeting?
+```
+
+---
+
+# Example Action Items
+
+```text
+- Michael will complete the database migration before next Wednesday.
+- Daniel will redesign the analytics dashboard by Friday afternoon.
+- Christopher will optimize the AI transcription pipeline before Monday’s demo.
 ```
 
 ---
@@ -154,12 +186,16 @@ What concerns did the speaker mention?
 
 ```text
 STT/
-├── gui_app.py          # Main desktop application
-├── transcribe.py       # Earlier command-line transcription script
-├── requirements.txt    # Python dependencies
-├── README.md           # Project documentation
-├── .env                # Local API key, not committed
-├── .gitignore          # Files ignored by Git
+├── gui_app.py              # Main desktop application
+├── transcribe.py           # Earlier CLI transcription prototype
+├── requirements.txt        # Python dependencies
+├── README.md               # Project documentation
+├── .env                    # Local API key (not committed)
+├── .gitignore              # Git ignored files
+├── transcript.txt          # Generated transcript output
+├── summary.txt             # Generated AI summary
+├── action_items.txt        # Generated action items
+├── recording.wav           # Saved recording
 ```
 
 ---
@@ -182,9 +218,14 @@ __pycache__/
 recording.wav
 transcript.txt
 summary.txt
+action_items.txt
 ```
 
-This prevents API keys, local environments, audio recordings, and generated transcript files from being pushed to GitHub.
+This prevents:
+- API key leaks
+- local environment uploads
+- large audio file uploads
+- generated transcript artifacts from being pushed to GitHub
 
 ---
 
@@ -195,11 +236,14 @@ This project demonstrates:
 - AI-native product thinking
 - Speech-to-text integration
 - LLM API integration
-- Local + cloud hybrid AI workflow
-- Real-time user interaction
+- Realtime transcript processing
+- Local + cloud hybrid AI workflows
+- Context-aware transcript analysis
 - Transcript-based summarization
-- Question answering over user-provided context
+- Action-item extraction
+- Retrieval-style transcript Q&A
 - Practical desktop application development
+- Rapid AI prototyping
 
 ---
 
@@ -209,16 +253,18 @@ Potential next steps:
 
 - Speaker diarization
 - Better timestamp support
-- Export summaries to PDF or Markdown
-- Semantic search over past meetings
-- Local vector database for long-term memory
-- Support for multiple LLM providers
-- Real-time streaming summarization
+- Semantic search over meetings
+- Vector database integration
+- Persistent long-term meeting memory
+- Realtime streaming summarization
+- Multi-user meeting support
 - Deployable web version
 - Speaker recognition
-- Meeting memory persistence across sessions
 - AI-generated meeting titles
-- Action-item extraction into task lists
+- Calendar integrations
+- Realtime collaborative meeting notes
+- Local LLM support through Ollama
+- Vision-aware meeting support
 
 ---
 
@@ -226,13 +272,14 @@ Potential next steps:
 
 This project was intentionally designed as a practical AI engineering demo rather than a highly polished commercial product.
 
-The focus was:
+The primary focus was:
 - rapid prototyping
 - practical AI workflows
+- realtime interaction
 - local AI integration
-- real-time interaction
-- usability
 - modular architecture
+- usability
+- production-style AI pipeline design
 
 ---
 
@@ -251,7 +298,7 @@ soundfile
 torch
 ```
 
-Install requirements:
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
