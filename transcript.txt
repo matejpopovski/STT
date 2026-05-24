@@ -1,1 +1,1 @@
- Test 1 2 3, this is a test checking whether the App, the Python script works. 1 2 3, this is a test.
+ Hello, this is a test. My name is Smate. Let's see if the voice works. Okay, looks like it almost works live and I will... of recording right now.
