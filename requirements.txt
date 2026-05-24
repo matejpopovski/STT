@@ -1,0 +1,8 @@
+customtkinter
+groq
+numpy
+openai-whisper
+python-dotenv
+sounddevice
+soundfile
+torch
