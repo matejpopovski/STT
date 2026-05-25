@@ -6,12 +6,6 @@ This project was built as a lightweight AI engineering demo focused on speech-to
 
 ---
 
-# Demo Video
-
-[Watch Demo Video](PASTE_YOUR_UNLISTED_YOUTUBE_LINK_HERE)
-
----
-
 # Features
 
 - Record audio directly from the microphone
